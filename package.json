@@ -1,6 +1,7 @@
 {
   "name": "tic-tac-toe",
   "version": "0.1.0",
+  "author": "Júlio Fortunato",
   "private": true,
   "dependencies": {
     "react": "^16.6.3",
