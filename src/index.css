@@ -1,10 +1,30 @@
+html {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  background: #8360c3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 ol, ul {
   padding-left: 30px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: 'Staatliches', cursive;
+  font-size: 5rem;
+  color: #f7f7f7;
+  text-shadow: 1px 5px #4d327f;
+  text-align: center;
+}
+
+.board-row {
 }
 
 .board-row:after {
@@ -18,10 +38,11 @@ ol, ul {
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background-color: rgba(255, 255, 255, .2);
+  border: 5px solid #fff;
+  border-radius: 10%;
   float: left;
-  font-size: 24px;
+  font-size: 50px;
   font-weight: bold;
   line-height: 34px;
   height: 34px;
@@ -29,8 +50,41 @@ ol, ul {
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 120px;
+  height: 120px;
+  color: #4d327f;
 }
+
+.game-status {
+  padding-top: 20px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.game-moves {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.game-move {
+  height: 40px;
+  background-color: rgba(255, 255, 255, .2);
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.game-move:hover {
+  background-color: #4d327f;
+  transition: background-color 1s;
+  cursor: pointer;
+}
+
 
 .square:focus {
   outline: none;
@@ -42,9 +96,14 @@ ol, ul {
 
 .game {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-info {
-  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

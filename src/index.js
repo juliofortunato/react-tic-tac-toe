@@ -98,7 +98,10 @@ class Game extends React.Component {
 
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>
+          <button
+            className="game-move"
+            onClick={() => this.jumpTo(move)}
+          >
             {desc}
           </button>
         </li>
@@ -120,8 +123,8 @@ class Game extends React.Component {
           />
         </div>
         <div className="game-info">
-          <div>{status}</div>
-          <ol>{moves}</ol>
+          <div className="game-status">{status}</div>
+          <ul className="game-moves">{moves}</ul>
         </div>
       </div>
     );
